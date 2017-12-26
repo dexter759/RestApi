@@ -1,8 +1,10 @@
-package com.damir.restapi.Dao;
+package com.damir.restapi.dao;
 
-import com.damir.restapi.Entity.Task;
+import com.damir.restapi.entity.Task;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public interface TaskDao {
     Collection<Task> getAllTasks();

@@ -1,6 +1,6 @@
-package com.damir.restapi.Dao;
+package com.damir.restapi.dao;
 
-import com.damir.restapi.Entity.Task;
+import com.damir.restapi.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 

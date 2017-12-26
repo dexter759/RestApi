@@ -1,4 +1,4 @@
-package com.damir.restapi.Entity;
+package com.damir.restapi.entity;
 
 public class Task {
 

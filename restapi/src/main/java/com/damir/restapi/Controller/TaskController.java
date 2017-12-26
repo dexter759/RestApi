@@ -1,12 +1,13 @@
-package com.damir.restapi.Controller;
+package com.damir.restapi.controller;
 
 
-import com.damir.restapi.Entity.Task;
-import com.damir.restapi.Service.TaskService;
+import com.damir.restapi.entity.Task;
+import com.damir.restapi.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 
