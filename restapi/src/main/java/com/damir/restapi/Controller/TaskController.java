@@ -36,6 +36,8 @@ public class TaskController {
     public void editTask(@RequestBody Task task){
         taskService.updateTask(task);
     }
+
+
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void insertTask(@RequestBody Task task){
         taskService.insertTask(task);
