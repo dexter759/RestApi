@@ -35,7 +35,7 @@ public class MySqlTaskDaoImpl implements TaskDao {
     }
 
     @Override
-    public Collection<Task> getAllTasks() {
+    public Collection <Task> getAllTasks() {
 
         final String sql = "SELECT id,name,task FROM tasks";
 
