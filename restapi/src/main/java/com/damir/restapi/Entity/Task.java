@@ -1,19 +1,15 @@
 package com.damir.restapi.entity;
 
-import java.util.Date;
-
 public class Task {
 
     private int id;
     private String name;
     private String task;
-    private String date;
 
-    public Task(int id, String name, String task, String date) {
+    public Task(int id, String name, String task) {
         this.id = id;
         this.name = name;
         this.task = task;
-        this.date = date;
     }
 
     public Task() {
@@ -41,13 +37,5 @@ public class Task {
 
     public void setTask(String task) {
         this.task = task;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 }
