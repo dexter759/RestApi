@@ -17,9 +17,9 @@ public class FakeTaskDaoImpl implements TaskDao {
         tasks = new HashMap<Integer, Task>(){
 
             {
-                put(1,new Task(1,"Go to meeting","Have a meal at Hotel plaza with Obama"));
-                put(2,new Task(2,"Go to dentist","Go to Dentist near avenue mall"));
-                put(3,new Task(3,"Cook fries","Pls don't forget to buy potatoes"));
+                put(1,new Task(1,"Go to meeting","Have a meal at Hotel plaza with Obama","31-10-2018"));
+                put(2,new Task(2,"Go to dentist","Go to Dentist near avenue mall","24-01-2018"));
+                put(3,new Task(3,"Cook fries","Pls don't forget to buy potatoes","14-09-2018"));
             }
         };
     }
@@ -45,6 +45,7 @@ public class FakeTaskDaoImpl implements TaskDao {
         Task oneTask = tasks.get(task.getId());
         oneTask.setName(task.getName());
         oneTask.setTask(task.getTask());
+        oneTask.setTask(task.getDate());
         tasks.put(task.getId(), oneTask);
 
     }
