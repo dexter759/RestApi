@@ -12,7 +12,7 @@ import java.util.Collection;
 
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("/api/tasks")
 public class TaskController {
 
     @Autowired
@@ -32,6 +32,7 @@ public class TaskController {
     public void deleteTaskById(@PathVariable("id") int id){
         taskService.deleteTaskById(id);
     }
+
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void editTask(@RequestBody Task task){
         taskService.updateTask(task);

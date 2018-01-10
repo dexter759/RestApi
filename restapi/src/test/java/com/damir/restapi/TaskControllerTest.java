@@ -55,7 +55,7 @@ public class TaskControllerTest{
 
     @Test
     public void should_upload_one_task(){
-        Task task = new Task(4,"Christmas Party","Take some presents for colleges");
+        Task task = new Task(4,"Christmas Party","Take some presents for colleges","04-12-2018");
         taskService.insertTask(task);
 
         Task testTask = taskService.getTaskById(4);
@@ -64,12 +64,13 @@ public class TaskControllerTest{
         assertEquals(4,testTask.getId());
         assertEquals("Christmas Party", testTask.getName());
         assertEquals("Take some presents for colleges", testTask.getTask());
+        assertEquals("04-12-2018",testTask.getDate());
 
     }
 
     @Test
     public void should_update_one_task(){
-        Task task = new Task(1,"Work","Work work work");
+        Task task = new Task(1,"Work","Work work work","04-12-2018");
         taskService.updateTask(task);
 
 
@@ -79,6 +80,7 @@ public class TaskControllerTest{
         assertEquals(1,testTask.getId());
         assertEquals("Work", testTask.getName());
         assertEquals("Work work work", testTask.getTask());
+        assertEquals("04-12-2018",testTask.getDate());
 
     }
 
