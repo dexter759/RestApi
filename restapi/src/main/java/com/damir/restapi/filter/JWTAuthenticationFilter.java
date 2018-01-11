@@ -1,4 +1,4 @@
-package com.damir.restapi.security.filter;
+package com.damir.restapi.filter;
 
 
 import com.damir.restapi.entity.ApplicationUser;
@@ -20,10 +20,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static com.damir.restapi.security.filter.SecurityConstants.EXPIRATION_TIME;
-import static com.damir.restapi.security.filter.SecurityConstants.HEADER_STRING;
-import static com.damir.restapi.security.filter.SecurityConstants.SECRET;
-import static com.damir.restapi.security.filter.SecurityConstants.TOKEN_PREFIX;
+import static com.damir.restapi.filter.SecurityConstants.EXPIRATION_TIME;
+import static com.damir.restapi.filter.SecurityConstants.HEADER_STRING;
+import static com.damir.restapi.filter.SecurityConstants.SECRET;
+import static com.damir.restapi.filter.SecurityConstants.TOKEN_PREFIX;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;

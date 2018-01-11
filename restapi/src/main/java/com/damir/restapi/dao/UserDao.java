@@ -1,4 +1,4 @@
-package com.damir.restapi.security.dao;
+package com.damir.restapi.dao;
 
 import com.damir.restapi.entity.ApplicationUser;
 import org.springframework.data.jpa.repository.JpaRepository;

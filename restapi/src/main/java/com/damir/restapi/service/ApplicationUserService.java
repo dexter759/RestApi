@@ -1,7 +1,7 @@
-package com.damir.restapi.security.service;
+package com.damir.restapi.service;
 
 import com.damir.restapi.entity.ApplicationUser;
-import com.damir.restapi.security.dao.UserDao;
+import com.damir.restapi.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

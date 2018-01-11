@@ -1,9 +1,8 @@
-package com.damir.restapi.security;
+package com.damir.restapi;
 
 
-import com.damir.restapi.security.dao.UserDao;
-import com.damir.restapi.security.filter.JWTAuthenticationFilter;
-import com.damir.restapi.security.filter.JWTAuthorizationFilter;
+import com.damir.restapi.filter.JWTAuthenticationFilter;
+import com.damir.restapi.filter.JWTAuthorizationFilter;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,7 +16,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.context.annotation.Bean;
 
-import static com.damir.restapi.security.filter.SecurityConstants.SIGN_UP_URL;
+import static com.damir.restapi.filter.SecurityConstants.SIGN_UP_URL;
 
 
 @EnableWebSecurity

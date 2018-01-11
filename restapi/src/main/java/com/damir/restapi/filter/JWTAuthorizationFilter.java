@@ -1,4 +1,4 @@
-package com.damir.restapi.security.filter;
+package com.damir.restapi.filter;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.damir.restapi.security.filter.SecurityConstants.HEADER_STRING;
-import static com.damir.restapi.security.filter.SecurityConstants.SECRET;
-import static com.damir.restapi.security.filter.SecurityConstants.TOKEN_PREFIX;
+import static com.damir.restapi.filter.SecurityConstants.HEADER_STRING;
+import static com.damir.restapi.filter.SecurityConstants.SECRET;
+import static com.damir.restapi.filter.SecurityConstants.TOKEN_PREFIX;
 
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {

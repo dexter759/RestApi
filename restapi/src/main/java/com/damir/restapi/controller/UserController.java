@@ -1,7 +1,7 @@
-package com.damir.restapi.security.controller;
+package com.damir.restapi.controller;
 
 import com.damir.restapi.entity.ApplicationUser;
-import com.damir.restapi.security.service.ApplicationUserService;
+import com.damir.restapi.service.ApplicationUserService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

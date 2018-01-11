@@ -1,4 +1,4 @@
-package com.damir.restapi.security.filter;
+package com.damir.restapi.filter;
 
 public class SecurityConstants {
 

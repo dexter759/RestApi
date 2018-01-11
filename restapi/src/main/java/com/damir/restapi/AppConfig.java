@@ -2,8 +2,7 @@ package com.damir.restapi;
 
 
 import com.damir.restapi.dao.MySqlTaskDaoImpl;
-import com.damir.restapi.security.dao.UserDao;
-import com.damir.restapi.security.service.ApplicationUserService;
+import com.damir.restapi.service.ApplicationUserService;
 import com.damir.restapi.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
