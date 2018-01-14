@@ -16,4 +16,5 @@ public interface TaskDao {
     void updateTask(Task task);
 
     void insertTask(Task task);
+
 }

@@ -2,7 +2,7 @@ package com.damir.restapi;
 
 
 import com.damir.restapi.dao.MySqlTaskDaoImpl;
-import com.damir.restapi.service.ApplicationUserService;
+//import com.damir.restapi.service.ApplicationUserService;
 import com.damir.restapi.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +28,7 @@ public class AppConfig {
         return new MySqlTaskDaoImpl();
     }
 
-    @Bean public static ApplicationUserService applicationUserService(){return new ApplicationUserService();}
+//    @Bean public static ApplicationUserService applicationUserService(){return new ApplicationUserService();}
 
 //    @Bean public static UserDaoImpl userDao(){
 //        return new UserDaoImpl();

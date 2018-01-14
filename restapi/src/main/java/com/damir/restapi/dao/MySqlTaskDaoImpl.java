@@ -30,6 +30,7 @@ public class MySqlTaskDaoImpl implements TaskDao {
                     task.setId(resultSet.getInt("id"));
                     task.setName(resultSet.getString("name"));
                     task.setTask(resultSet.getString("task"));
+                    task.setCompleted(resultSet.getBoolean("complete"));
                     return task;
         }
     }
@@ -37,7 +38,7 @@ public class MySqlTaskDaoImpl implements TaskDao {
     @Override
     public Collection <Task> getAllTasks() {
 
-        final String sql = "SELECT id,name,task FROM tasks";
+        final String sql = "SELECT * FROM tasks";
 
         return jdbcTemplate.query(sql, new TaskRowMapper());
     }
@@ -59,11 +60,12 @@ public class MySqlTaskDaoImpl implements TaskDao {
 
     @Override
     public void updateTask(Task task) {
-        final String sql = "UPDATE tasks SET name = ?, task = ? WHERE id=?";
+        final String sql = "UPDATE tasks SET name = ?, task = ?, complete = ? WHERE id=?";
         int id= task.getId();
         final String taskName = task.getName();
         final String taskTask = task.getTask();
-        jdbcTemplate.update(sql,new Object[]{taskName,taskTask,id});
+        final Boolean taskComplete= task.getCompleted();
+        jdbcTemplate.update(sql, taskName,taskTask,taskComplete,id);
 
     }
 
@@ -73,7 +75,8 @@ public class MySqlTaskDaoImpl implements TaskDao {
         final String sql = "INSERT INTO tasks (name,task) VALUES(?,?)";
         final String taskName = task.getName();
         final String taskTask = task.getTask();
-        jdbcTemplate.update(sql,new Object[]{taskName,taskTask});
+        jdbcTemplate.update(sql, taskName,taskTask);
 
     }
+
 }
