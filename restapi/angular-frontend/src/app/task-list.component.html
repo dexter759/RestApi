@@ -1,11 +1,11 @@
 <div class="task-content">
-  <h1 class="page-title">My Todos</h1>
+  <h1 class="page-title">My Tasks</h1>
   <div class="task-create">
     <form #taskForm="ngForm" (ngSubmit)="createTask(taskForm)" novalidate>
       <input type="text" id="title" class="form-control" placeholder="Type a todo and press enter..."
              required
              name="title" [(ngModel)]="newTask.name"
-             task ="title" [(ngModel)] = "newTask.task"
+             task ="task"[(ngModel)]="newTask.task"
              #title="ngModel" >
       <div *ngIf="title.errors && title.dirty"
            class="alert alert-danger">
